@@ -1,0 +1,8 @@
+{% for x in employees%}
+    <h1>{{ x.name }}</h1>
+    <p>{{ x.email }}</p>
+    <p>{{ x.phone }}</p>
+    <a href="{% url 'create_employee' %}">Create Employee</a>
+    <a href="{% url 'edit_employee' x.id %}">Edit Employee</a>
+    <a href = "{% url 'delete_employee' x.id %}">Delete Employee</a>
+{% endfor %}
